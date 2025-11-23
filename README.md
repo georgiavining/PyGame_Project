@@ -17,7 +17,7 @@ cd Pygame_Project
 python -m pip install pygame
 ```
 
-3. **Run the game**  
+4. **Run the game**  
 ```bash
 python main.py
 ```
