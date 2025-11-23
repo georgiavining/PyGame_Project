@@ -2,17 +2,25 @@
 
 ## How to Run
 
-1. Clone the repo:
-   git clone <repo-link>
+1. **Clone the repo**  
+```bash
+git clone <repo_url>
+```
 
-2. Navigate to the project folder:
-   cd PyGame_Project
+2. **Navigate to the project folder**  
+```bash
+cd Pygame_Project
+```
 
-3. Install dependencies:
-   python -m pip install pygame
+3. **Install depedencies**  
+```bash
+python -m pip install pygame
+```
 
-4. Run the game:
-   python main.py
+3. **Run the game**  
+```bash
+python main.py
+```
 
 ## Folder Structure
 
