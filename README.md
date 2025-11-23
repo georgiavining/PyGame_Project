@@ -16,6 +16,7 @@
 
 ## Folder Structure
 
+```
 PyGame Project/
 ├─ main.py              # Entry point to run the game
 ├─ config.py              # Constants
@@ -35,3 +36,4 @@ PyGame Project/
 │  └─ visual_objects.py
 ├─ asets/          # Images for cards, deck, background
 └─ README.md
+```
