@@ -10,18 +10,24 @@ class Deck(ImageBasedObject):
         self.image = pygame.transform.scale(self.image, (card_width, card_height))
         self.size = self.image.get_size()
         
-        self.cards = [Card(col, num) for _ in range(2) for col in colours for num in numbers]
+        self.cards = [Card(col, int(num)) for _ in range(2) for col in colours for num in numbers]
 
     def shuffle(self):
         random.shuffle(self.cards)
 
-    def deal(self, players):
+    def deal(self, players, cards_per_player=4):
         for player in players:
-            player.hand.add_to_hand(self.draw_from_deck(4))
+            if len(self.cards) == 0:
+                break
+            player.hand.add_to_hand(self.draw_from_deck(cards_per_player))
         
     def draw_from_deck(self, num):
+        if len(self.cards) == 0:
+            return []
         return [self.cards.pop() for _ in range(min(num, len(self.cards)))]
 
     def add_to_deck(self, cards):
+        if not isinstance(cards, list):
+            cards = [cards]
         self.cards.extend(cards)
         random.shuffle(self.cards)

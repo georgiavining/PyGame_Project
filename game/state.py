@@ -1,3 +1,6 @@
+from game.player import Player, ComputerPlayer
+
 class GameState:
     def __init__(self):
-        pass
+        self.players = [ComputerPlayer("Computer"), Player("You")]
+
