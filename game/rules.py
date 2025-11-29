@@ -30,13 +30,30 @@ class Rules:
                     if Rules.is_valid_group(group):
                         valid_groups.append(group)
         return valid_groups
-
+    
     @staticmethod
-    def has_won(player):
-        if len(player.hand) == 0:
-            return True
-        else:
-            return False
+    def check_winner(game):
+        """
+        Check whether any player has emptied their hand.
+
+        If so:
+            - set game.winner
+            - set game.state to "finished"
+
+        Returns:
+            The winning Player if someone has won, otherwise None.
+        """
+        if game.status != "running":
+            return game.winner
+
+        for p in game.players:
+            if not p.hand: 
+
+                game.winner = p
+
+                game.state = "finished"
+                return p
+        return None
 
     
 

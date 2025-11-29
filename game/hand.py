@@ -1,7 +1,7 @@
 import random
 
 class Hand:
-    def __init__(self):
+    def __init__(self, ui=None):
         self.cards = []
 
     def __len__(self):
